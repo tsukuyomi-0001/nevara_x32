@@ -1,0 +1,19 @@
+[package]
+name = "nevara-cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["stream", "multipart", "rustls-tls"] }
+eventsource-stream = "0.2"
+futures-util = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+owo-colors = "4.0"
+rustyline = "17.0"
+rustyline-derive = "0.13.0"
+tabled = "0.15"
+indicatif = "0.17"
+dialoguer = "0.11"
+figlet-rs = "0.1.5"
