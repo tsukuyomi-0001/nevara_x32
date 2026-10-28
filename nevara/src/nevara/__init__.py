@@ -40,7 +40,6 @@ def processed_text_stream(chunk):
 
 async def agent_stream(message: str):
     human_message = HumanMessage(content=message)
-    # config = {"configurable": {"thread_id": "your-unique-session-id"}}
     config = RunnableConfig({"configurable": {"thread_id": "your-unique-session-id"}})
     print(message_history)
 
@@ -56,6 +55,7 @@ async def agent_stream(message: str):
         if mode == "messages":
             for event in processed_text_stream(data):
                 yield event
+
     yield {
         "chunk": "",
         "end": True,
